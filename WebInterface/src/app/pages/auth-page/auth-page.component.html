@@ -1,0 +1,18 @@
+
+<div style="background-color: lightgray;">
+    <div class="container">
+        <h1>
+            {{showLogin ? "Login" : "Register"}}
+        </h1>
+    </div>
+</div>
+
+<div class="container">
+    <form>
+        <input type="text" name="username" placeholder="username" maxlength="100" #username>
+        <input type="password" name="password" placeholder="password" maxlength="100" #password>
+        <input *ngIf="!showLogin" type="password" name="confirmPassword" placeholder="confirm password" maxlength="100" #confirmPassword>
+        <button type="button" (click)="submit()">{{showLogin ? "Login" : "Register"}}</button>
+        <label *ngIf="showLoginError" id="error-message">*{{errorMessage}}</label>
+    </form>
+</div>

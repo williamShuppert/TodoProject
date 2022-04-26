@@ -1,0 +1,10 @@
+<div style="background-color: lightgray;">
+    <div class="container">
+        <h1>{{listInfo ? listInfo.name : ''}}</h1>
+    </div>
+</div>
+
+<div class="container">
+    <app-add placeholder="add an item" (onAdd)="addItem($event)"></app-add>
+    <app-todo-item *ngFor="let item of items" [itemInfo]="item" (onDelete)="deleteItem($event)"></app-todo-item>
+</div>

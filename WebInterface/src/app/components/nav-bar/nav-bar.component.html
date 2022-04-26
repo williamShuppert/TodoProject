@@ -1,0 +1,13 @@
+<nav>
+    <div class="container">
+        <div>
+            <a routerLink="/home" routerLinkActive="active" *ngIf="authService.isAuthed()">My Lists</a>
+        </div>
+        <div>
+            <a routerLink="/profile" routerLinkActive="active" *ngIf="authService.isAuthed()">Profile</a>
+            <a *ngIf="authService.isAuthed()" (click)="authService.logout()">Logout</a>
+            <a routerLink="/login" routerLinkActive="active" *ngIf="!authService.isAuthed()">Login</a>
+            <a routerLink="/register" routerLinkActive="active" *ngIf="!authService.isAuthed()">Register</a>
+        </div>
+    </div>
+</nav>

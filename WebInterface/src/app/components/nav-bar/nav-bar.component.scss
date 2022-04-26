@@ -1,0 +1,30 @@
+nav {
+    background-color: darkgray;
+    
+    a {
+        display: inline-block;
+        text-decoration: none;
+        color: lightgray;
+        text-transform: lowercase;
+        padding: 8px 15px;
+        letter-spacing: 1px;
+        transition: all ease .3s;
+
+        &:hover, &.active {
+            color: white;
+        }
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+}

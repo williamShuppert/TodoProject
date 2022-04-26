@@ -1,0 +1,11 @@
+<div class="card">
+    <div class="body">
+        <input type="checkbox" id="content{{itemInfo.id}}" (click)="toggleCompleted()" #complete>
+        <label *ngIf="!editing" for="content{{itemInfo.id}}" [ngClass]="{'completed' : itemInfo.isComplete}">{{itemInfo.content}}</label>
+        <input *ngIf="editing" type="text" maxlength="150" #edit>
+    </div>
+    <div class="buttons">
+        <button (click)="primary()">{{editing ? 'Save' : deleting ? 'Confirm' : 'Edit'}}</button>
+        <button (click)="secondary()">{{editing || deleting ? 'Cancel' : 'Delete'}}</button>
+    </div>
+</div>

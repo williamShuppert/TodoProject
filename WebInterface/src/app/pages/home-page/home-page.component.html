@@ -1,0 +1,11 @@
+<div style="background-color: lightgray;">
+    <div class="container">
+        <h1>Your Todos</h1>
+    </div>
+</div>
+
+<div class="container">
+    <app-add placeholder="name your new list" (onAdd)="addList($event)"></app-add>
+
+    <app-list-item *ngFor="let list of lists" [listInfo]="list" (onDelete)="deleteList($event)"></app-list-item>
+</div>
