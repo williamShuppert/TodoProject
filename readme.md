@@ -1,5 +1,5 @@
 # Todo Project
-A simple full stack todo application (UI, API, and DB) with JWT Authentication.
+A simple full stack todo application (UI, API, and DB) with JWT Authorization.
 Built for CSE 385
 
 ## Setup
